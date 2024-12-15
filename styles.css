@@ -69,14 +69,14 @@ section {
 
 
 /* Promociones */
-.promociones {
+.promociones-imagenes {
     display: flex;
     justify-content: center;
     gap: 10px;
     flex-wrap: wrap;
 }
 
-.promociones img {
+.promociones-imagenes img {
     max-width: 200px;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
