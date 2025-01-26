@@ -176,3 +176,55 @@ footer p {
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
+/* === Media Queries para Responsividad === */
+
+/* Para pantallas de hasta 768px (tablets y móviles) */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    header img {
+        height: 40px; /* Reduce el tamaño del logotipo */
+        margin-bottom: 10px;
+    }
+
+    nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav a {
+        display: block;
+        margin: 10px 0;
+        padding: 10px 20px;
+        width: 80%;
+        text-align: center;
+    }
+
+    section {
+        padding: 20px 10px;
+    }
+
+    .service {
+        width: 90%; /* Ajusta las tarjetas para ocupar más espacio en móviles */
+    }
+}
+
+/* Para pantallas muy pequeñas, como móviles de 480px o menos */
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.5em;
+    }
+
+    nav a {
+        width: 100%;
+        font-size: 1em;
+    }
+
+    .service {
+        padding: 15px;
+    }
+}
