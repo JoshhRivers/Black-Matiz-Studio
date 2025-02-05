@@ -5,62 +5,70 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BLACK MATIZ Studio</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"> <!-- Íconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <img src="Prueb.png" alt="Black Matiz Studio" class="logo">
+    <header id="main-header">
+        <img src="Prueba.png" alt="Black Matiz Studio" class="logo">
+        <nav class="navbar">
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="nav-list">
+                <li><a href="#sobre-nosotros">Sobre Nosotros</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#promociones">Promociones</a></li>
+                <li><a href="#galeria">Galería</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
     </header>
+
     <main>
-        <h1>Bienvenidos a BLACK MATIZ Studio</h1>
-        <section>
+        <h1 class="fade-in">Bienvenidos a BLACK MATIZ Studio</h1>
+        
+        <section id="sobre-nosotros" class="reveal">
             <h2>Sobre Nosotros</h2>
             <p>Especialistas en color, tratamientos capilares, pestañas y micropigmentación.</p>
         </section>
-        <section id="servicios">
+
+        <section id="servicios" class="reveal">
             <h2>Servicios</h2>
             <div class="services">
                 <div class="service-card">
-      
-                    <i class="fa-solid fa-cut"></i> <!-- Ícono -->
-                       
+                    <i class="fa-solid fa-cut"></i>
                     <h3>Corte de Cabello</h3>
-                    
                     <p>Estilos modernos y clásicos adaptados a ti.</p>
-                    <a href="corte-cabello.html"
-                    target="_black">Ejemplos</a>
+                    <a href="corte-cabello.html" target="_blank">Ejemplos</a>
                 </div>
                 <div class="service-card">
-                    <i class="fa-solid fa-hand-sparkles"></i> <!-- Ícono -->
+                    <i class="fa-solid fa-hand-sparkles"></i>
                     <h3>Manicura y Pedicura</h3>
                     <p>Cuidado profesional para tus uñas.</p>
-                    <a href="manicura-pedicura.html"
-                    target="_black">Ejemplos</a>
+                    <a href="manicura-pedicura.html" target="_blank">Ejemplos</a>
                 </div>
                 <div class="service-card">
-                    <i class="fa-solid fa-face-smile"></i> <!-- Ícono -->
-                    
+                    <i class="fa-solid fa-face-smile"></i>
                     <h3>Tratamientos Faciales</h3>
                     <p>Repara y cuida la piel de tu rostro.</p>
-                    <a href="tratamientos-faciales.html"
-                     target="_black">Ejemplos</a>
+                    <a href="tratamientos-faciales.html" target="_blank">Ejemplos</a>
                 </div>
             </div>
-             <section class="promociones"> 
-    <h2>Promociones</h2>
-                 <p>Contamos con una gran variedad de estilos y precios, adapatados a tu mejor comodidad.</p>
-                 <div class="promociones-imagenes">
-    
-    <img src="Cabello1.jpg" alt="Ejemplo de trabajo 1">
-                <img src="Cabello2.jpg" alt="Ejemplo de trabajo 2">
-                 </div>
-             </section>.
-
-
-</section> 
         </section>
-        <section class="gallery">
+
+        <section id="promociones" class="reveal">
+            <h2>Promociones</h2>
+            <p>Contamos con una gran variedad de estilos y precios, adaptados a tu comodidad.</p>
+            <div class="promociones-imagenes">
+                <img src="Cabello1.jpg" alt="Ejemplo de trabajo 1">
+                <img src="Cabello2.jpg" alt="Ejemplo de trabajo 2">
+            </div>
+        </section>
+
+        <section id="galeria" class="gallery reveal">
             <h2>Galería</h2>
             <div class="gallery-images">
                 <img src="trabajo1.jpg" alt="Ejemplo de trabajo 1">
@@ -68,30 +76,23 @@
                 <img src="trabajo3.jpg" alt="Ejemplo de trabajo 3">
             </div>
         </section>
-        <footer>
-            <p>Contáctanos: 55 8442 6144 | blackmatizstudio@gmail.com</p>
+
+        <footer id="contacto">
+            <p>Contáctanos: 55 8442 6144 
+               |backmatizstudio@gmail.com 
+               |Direccion: </p>
             <div class="social-links">
-        <a href="https://www.facebook.com/profile.php?id=100084313306434&mibextid=ZbWKwL" target="_blank" class="social-icon">
-            <img src="azul.png" alt="Facebook">
-        </a>
-        <a href="https://wa.me/5584426144" target="_blank" class="social-icon">
-            <img src="verde.png" alt="WhatsApp">
-        </a>
-    </div>
-            <div class="map">
-                <iframe 
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3765.6238244044725!2d-99.15382802484048!3d19.298718344942987!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85ce0053d9be2a7d%3A0xeac3f9976178e046!2sEl%20Gran%20Sol%20Tlalpan!5e0!3m2!1ses!2smx!4v1733876832985!5m2!1ses!2smx" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" 
-                    width="100%" 
-                    height="250" 
-                    style="border:0;" 
-                    allowfullscreen="" 
-                    loading="lazy">
-                </iframe>
+                <a href="https://www.facebook.com" target="_blank" class="social-icon">
+                    <img src="azul.png" alt="Facebook">
+                </a>
+                <a href="https://wa.me/5584426144" target="_blank" class="social-icon">
+                    <img src="verde.png" alt="WhatsApp">
+                </a>
             </div>
-            
             <p>&copy; 2024 BLACK MATIZ Studio. Todos los derechos reservados.</p>
         </footer>
     </main>
+
+    <script src="script.js"></script>
 </body>
 </html>
-
