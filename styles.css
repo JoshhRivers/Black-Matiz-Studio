@@ -219,7 +219,7 @@ header {
     .nav-list {
         display: none;
         flex-direction: column;
-        background:#fff;
+        background: #fff;
         position: absolute;
         top: 60px;
         right: 20px;
@@ -231,7 +231,6 @@ header {
     /* Mostrar menú cuando se activa */
     .nav-list.active {
         display: flex;
-        
     }
 
     .nav-list li {
@@ -239,6 +238,7 @@ header {
         text-align: center;
     }
 }
+
 
 
 
