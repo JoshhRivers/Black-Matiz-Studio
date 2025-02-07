@@ -212,8 +212,7 @@ header {
     /* Menú hamburguesa visible */
     .menu-toggle {
         display: flex;
-        flex-direction: column;
-        cursor:pointer;
+        
     }
 
     /* Ocultar la lista de navegación por defecto */
