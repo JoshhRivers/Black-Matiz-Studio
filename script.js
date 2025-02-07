@@ -1,25 +1,28 @@
-// Efecto para desaparecer el logo al hacer scroll
-window.addEventListener('scroll', () => {
-    const logo = document.querySelector('.logo');
-    logo.style.opacity = 1 - window.scrollY / 200;
-});
+document.addEventListener("DOMContentLoaded", function () {
+    const bienvenida = document.querySelector('.bienvenida');
+    const sections = document.querySelectorAll('.reveal');
+    const menuToggle = document.getElementById('mobile-menu');
+    const navList = document.querySelector('.nav-list');
 
-// Efecto Reveal al hacer scroll
-const sections = document.querySelectorAll('.reveal');
-
-window.addEventListener('scroll', () => {
-    sections.forEach(section => {
-        const rect = section.getBoundingClientRect();
-        if (rect.top < window.innerHeight - 100) {
-            section.classList.add('visible');
+    window.addEventListener('scroll', function() {
+        // Desaparecer la sección de bienvenida al hacer scroll
+        if (window.scrollY > 100) {
+            bienvenida.classList.add('hidden');
+        } else {
+            bienvenida.classList.remove('hidden');
         }
+
+        // Efecto Reveal en secciones
+        sections.forEach(section => {
+            const rect = section.getBoundingClientRect();
+            if (rect.top < window.innerHeight - 100) {
+                section.classList.add('visible');
+            }
+        });
     });
-});
 
-// Menú móvil
-const menuToggle = document.getElementById('mobile-menu');
-const navList = document.querySelector('.nav-list');
-
-menuToggle.addEventListener('click', () => {
-    navList.classList.toggle('active');
+    // Menú móvil
+    menuToggle.addEventListener('click', function () {
+        navList.classList.toggle('active');
+    });
 });
