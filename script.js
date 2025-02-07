@@ -3,7 +3,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const sections = document.querySelectorAll('.reveal');
     const menuToggle = document.getElementById('mobile-menu');
     const navList = document.getElementById('nav-list');
-    navList-classList.toggle('active');
 
     window.addEventListener('scroll', function() {
         // Desaparecer la sección de bienvenida al hacer scroll
@@ -20,11 +19,13 @@ document.addEventListener("DOMContentLoaded", function () {
                 section.classList.add('visible');
             }
         });
-    });
-
-    // Menú móvil
-    
+        // Menú móvil
+    console.log("menuToggle:",menuToggle);
+    cosole.log("navList:",navList);
     menuToggle.addEventListener('click', function () {
         navList.classList.toggle('active');
     });
-});
+    });
+
+    
+
