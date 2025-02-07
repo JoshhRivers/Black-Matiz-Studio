@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const sections = document.querySelectorAll('.reveal');
     const menuToggle = document.getElementById('mobile-menu');
     const navList = document.getElementById('.nav-list');
+    navList-classList.toggle('active');
 
     window.addEventListener('scroll', function() {
         // Desaparecer la sección de bienvenida al hacer scroll
