@@ -56,6 +56,20 @@ section.reveal.visible {
     color: #452463;
 }
 
+/* Botón de menú móvil */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.bar {
+    height: 3px;
+    width: 25px;
+    background-color: #5A2B81;
+    margin: 4px 0;
+    transition: all 0.3s;
+}
 
 /* Enlaces sociales */
 .social-links {
@@ -204,7 +218,7 @@ header {
     .nav-list {
         display: none;
         flex-direction: column;
-        background: white;
+        background:#fff ;
         position: absolute;
         top: 60px;
         right: 20px;
