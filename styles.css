@@ -70,7 +70,6 @@ section.reveal.visible {
     margin: 4px 0;
     transition: all 0.3s;
 }
-
 /* Enlaces sociales */
 .social-links {
     display: flex;
@@ -238,7 +237,6 @@ header {
         text-align: center;
     }
 }
-
 
 
 
