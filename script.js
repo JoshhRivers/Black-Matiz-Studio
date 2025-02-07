@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const bienvenida = document.querySelector('.bienvenida');
     const sections = document.querySelectorAll('.reveal');
     const menuToggle = document.getElementById('mobile-menu');
-    const navList = document.getElementById('.nav-list');
+    const navList = document.getElementById('nav-list');
     navList-classList.toggle('active');
 
     window.addEventListener('scroll', function() {
@@ -23,8 +23,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     // Menú móvil
-    console.log(menuToggle);
-    cosole.log(navList);
+    
     menuToggle.addEventListener('click', function () {
         navList.classList.toggle('active');
     });
