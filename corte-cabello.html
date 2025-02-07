@@ -1,18 +1,13 @@
 <!DOCTYPE html>
-<!--
-Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
-Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this template
--->
-<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Corte de Cabello - BLACK MATIZ Studio</title>
-    <link rel="stylesheet" href="estilos.css"> <!-- Asegúrate de que el CSS esté bien vinculado -->
+    <title>Color - BLACK MATIZ Studio</title>
+    <link rel="stylesheet" href="estilos.css">
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             padding: 0;
             background-color: #f4f4f4;
@@ -21,28 +16,40 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this
             background-color: #6a4c92;
             color: white;
             text-align: center;
-            padding: 10px;
+            padding: 30px 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        header h1 {
+            font-size: 2.5em;
+            letter-spacing: 2px;
         }
         nav {
             background-color: #5e3e7e;
-            padding: 10px;
+            padding: 15px;
             text-align: center;
+            border-top: 3px solid #6a4c92;
         }
         nav a {
             color: white;
             text-decoration: none;
             margin: 0 20px;
             font-weight: bold;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s, transform 0.2s;
         }
         nav a:hover {
-            text-decoration: underline;
+            background-color: #6a4c92;
+            transform: scale(1.1);
         }
         main {
-            padding: 20px;
-            max-width: 900px;
+            padding: 40px;
+            max-width: 1200px;
             margin: 0 auto;
             background-color: white;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            transition: transform 0.3s;
         }
         .example-images {
             display: flex;
@@ -53,58 +60,107 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this
             width: 30%;
             margin: 10px;
             border-radius: 8px;
-            transition: transform 0.3s;
+            transition: transform 0.3s, box-shadow 0.3s;
         }
         .example-images img:hover {
             transform: scale(1.05);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
         }
         footer {
             background-color: #6a4c92;
             color: white;
             text-align: center;
-            padding: 10px;
-            position: fixed;
+            padding: 20px;
+            position: relative;
             bottom: 0;
             width: 100%;
+            box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        footer .social-icons a {
+            margin: 0 10px;
+            color: white;
+            text-decoration: none;
+            font-size: 1.5em;
+        }
+
+        footer .social-icons a:hover {
+            color: #6a4c92;
+        }
+
+        /* Animación de aparición de elementos */
+        section {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.5s, transform 0.5s;
+        }
+
+        section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Responsividad */
+        @media (max-width: 768px) {
+            nav a {
+                margin: 0 10px;
+            }
+            .example-images img {
+                width: 45%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header {
+                padding: 15px;
+            }
+            nav {
+                padding: 10px;
+            }
+            .example-images img {
+                width: 90%;
+                margin: 10px auto;
+                display: block;
+            }
         }
     </style>
 </head>
 <body>
 
 <header>
-    <h1>Corte de Cabello</h1>
+    <h1>Todos nuestros tintes</h1>
 </header>
 
 <nav>
-    <a href="index.html">Volver a la Página Principal</a> <!-- Enlace para regresar a la página principal -->
-    <a href="manicura-pedicura.html">Ejemplos Manicura y Pedicura</a>
-    <a href="tratamientos-faciales.html">Ejemplos Tratamientos Faciales</a>
+    <a href="index.html">Volver a la Página Principal</a>
+    <a href="manicura-pedicura.html">Manicura y Pedicura</a>
+    <a href="tratamientos-faciales.html">Tratamientos Faciales</a>
     <a href="#ejemplo1">Ejemplo 1</a>
     <a href="#ejemplo2">Ejemplo 2</a>
     <a href="#ejemplo3">Ejemplo 3</a>
 </nav>
 
 <main>
-    <h2>Ejemplos de Cortes de Cabello</h2>
-    
+    <h2>Tintes</h2>
+   
     <section id="ejemplo1">
-        <h3>Ejemplo 1 - Corte Para Caballero</h3>
+        <h3>Corte Para Caballero</h3>
         <div class="example-images">
             <img src="Caballero1.jpg" alt="Corte Caballero 1">
             <img src="Caballero2.jpg" alt="Corte Caballero 2">
         </div>
     </section>
-    
+   
     <section id="ejemplo2">
-        <h3>Ejemplo 2 - Corte Juvenil</h3>
+        <h3>Corte Juvenil</h3>
         <div class="example-images">
             <img src="Juvenil1.jpg" alt="Corte Juvenil 1">
             <img src="Juvenil2.jpg" alt="Corte Juvenil 2">
         </div>
     </section>
-    
+   
     <section id="ejemplo3">
-        <h3>Ejemplo 3 - Tintes</h3>
+        <h3>Tintes</h3>
         <div class="example-images">
             <img src="Tinte1.jpg" alt="Tinte 1">
             <img src="Tinte2.jpg" alt="Tinte 2">
@@ -113,9 +169,24 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this
 </main>
 
 <footer>
-    
     <p>&copy; 2024 BLACK MATIZ Studio. Todos los derechos reservados.</p>
+    <div class="social-icons">
+        <a href="https://facebook.com/blackmatizstudio" target="_blank">Facebook</a>
+        <a href="https://wa.me/1234567890" target="_blank">WhatsApp</a>
+    </div>
 </footer>
+
+<script>
+    // Mostrar animación de las secciones cuando el usuario hace scroll
+    const sections = document.querySelectorAll('section');
+    window.addEventListener('scroll', () => {
+        sections.forEach(section => {
+            if (section.getBoundingClientRect().top < window.innerHeight) {
+                section.classList.add('visible');
+            }
+        });
+    });
+</script>
 
 </body>
 </html>
