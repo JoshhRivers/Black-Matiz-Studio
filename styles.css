@@ -1,32 +1,41 @@
-/* Estilos básicos */
-body {
-    margin: 0;
-    font-family: 'Montserrat', sans-serif;
-    background: linear-gradient(135deg, #fdfdfd, #ece9f0);
-    color: #333;
-    line-height: 1.6;
-    overflow-x: hidden;
+/* Estilos de la Sección de Bienvenida */
+.bienvenida {
+    text-align: center;
+    margin-top: 50px;
+    opacity: 1;
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
 }
 
-/* Logo */
-.logo {
-    width: 100px;
-    transition: opacity 0.5s ease-out;
+.logo-bienvenida {
+    width: 200px;
+    display: block;
+    margin: 0 auto;
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
 }
 
-/* Encabezado */
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+/* Efecto para esconder la bienvenida al hacer scroll */
+.bienvenida.hidden {
+    opacity: 0;
+    transform: translateY(-50px);
+}
+
+/* Efecto Reveal en las secciones */
+section {
+    padding: 30px 20px;
     background: #fff;
-    padding: 10px 20px;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 1200px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
 }
 
+section.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
 /* Menú */
 .navbar ul {
     display: flex;
@@ -61,7 +70,26 @@ header {
     margin: 4px 0;
     transition: all 0.3s;
 }
+/* Enlaces sociales */
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px; /* Espaciado entre íconos */
+    margin-top: 10px;
+}
 
+.social-icon img {
+    width: 40px; /* Tamaño estándar de íconos */
+    height: 40px; /* Tamaño estándar de íconos */
+    transition: transform 0.3s ease;
+    border-radius: 50%; /* Hace los íconos circulares */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para mejor visibilidad */
+}
+
+.social-icon img:hover {
+    transform: scale(1.1); /* Efecto de zoom al pasar el ratón */
+    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.15); /* Aumenta la sombra al hacer hover */
+}
 /* Secciones */
 section {
     padding: 30px 20px;
@@ -102,11 +130,90 @@ footer {
     text-align: center;
 }
 
-/* Responsividad */
+/* 🔹 Estilos generales */
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    background: linear-gradient(135deg, #fdfdfd, #ece9f0);
+    color: #333;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* 🔹 Encabezado (Header) */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+    padding: 10px 5%;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* 🔹 Logo en el Header */
+.logo {
+    width: 200px; /* Tamaño base */
+    height: auto;
+    transition: width 0.3s ease-in-out;
+}
+
+/* 🔹 Menú de Navegación */
+.navbar ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #5A2B81;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+    color: #452463;
+}
+
+/* 🔹 Botón de Menú "Hamburguesa" (Móvil) */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.bar {
+    height: 3px;
+    width: 25px;
+    background-color: #5A2B81;
+    margin: 4px 0;
+    transition: all 0.3s;
+}
+
+/* 📌 🔹 Responsividad */
+@media (max-width: 1024px) {
+    .logo {
+        width: 120px; /* Reducción en tablets */
+    }
+}
+
 @media (max-width: 768px) {
+    .logo {
+        width: 100px; /* Reducción en celulares */
+    }
+
+    /* Menú hamburguesa visible */
     .menu-toggle {
         display: flex;
     }
+
+    /* Ocultar la lista de navegación por defecto */
     .nav-list {
         display: none;
         flex-direction: column;
@@ -114,33 +221,22 @@ footer {
         position: absolute;
         top: 60px;
         right: 20px;
+        width: 200px;
         box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        border-radius: 5px;
     }
+
+    /* Mostrar menú cuando se activa */
     .nav-list.active {
         display: flex;
     }
-   
-}
-/* Enlaces sociales */
-.social-links {
-    display: flex;
-    justify-content: center;
-    gap: 15px; /* Espaciado entre íconos */
-    margin-top: 10px;
+
+    .nav-list li {
+        padding: 15px;
+        text-align: center;
+    }
 }
 
-.social-icon img {
-    width: 40px; /* Tamaño estándar de íconos */
-    height: 40px; /* Tamaño estándar de íconos */
-    transition: transform 0.3s ease;
-    border-radius: 50%; /* Hace los íconos circulares */
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para mejor visibilidad */
-}
-
-.social-icon img:hover {
-    transform: scale(1.1); /* Efecto de zoom al pasar el ratón */
-    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.15); /* Aumenta la sombra al hacer hover */
-}
 
 
 
