@@ -212,13 +212,15 @@ header {
     /* Menú hamburguesa visible */
     .menu-toggle {
         display: flex;
+        flex-direction: column;
+        cursor:pointer;
     }
 
     /* Ocultar la lista de navegación por defecto */
     .nav-list {
         display: none;
         flex-direction: column;
-        background:white ;
+        background:#fff;
         position: absolute;
         top: 60px;
         right: 20px;
@@ -230,7 +232,7 @@ header {
     /* Mostrar menú cuando se activa */
     .nav-list.active {
         display: flex;
-        flex-direction: column;
+        
     }
 
     .nav-list li {
