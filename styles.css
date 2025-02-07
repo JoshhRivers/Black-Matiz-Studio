@@ -230,6 +230,7 @@ header {
     /* Mostrar menú cuando se activa */
     .nav-list.active {
         display: flex;
+        flex-direction: column;
     }
 
     .nav-list li {
