@@ -22,8 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     // Menú móvil
-    console.log(menuToggle);
-    cosole.log(navList);
+    
     menuToggle.addEventListener('click', function () {
         navList.classList.toggle('active');
     });
