@@ -20,8 +20,7 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
         // Menú móvil
-    console.log("menuToggle:",menuToggle);
-    cosole.log("navList:",navList);
+    
     menuToggle.addEventListener('click', function () {
         navList.classList.toggle('active');
     });
