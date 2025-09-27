@@ -36,6 +36,7 @@ section.reveal.visible {
     opacity: 1;
     transform: translateY(0);
 }
+
 /* Menú */
 .navbar ul {
     display: flex;
@@ -70,26 +71,28 @@ section.reveal.visible {
     margin: 4px 0;
     transition: all 0.3s;
 }
+
 /* Enlaces sociales */
 .social-links {
     display: flex;
     justify-content: center;
-    gap: 15px; /* Espaciado entre íconos */
+    gap: 15px;
     margin-top: 10px;
 }
 
 .social-icon img {
-    width: 40px; /* Tamaño estándar de íconos */
-    height: 40px; /* Tamaño estándar de íconos */
+    width: 40px;
+    height: 40px;
     transition: transform 0.3s ease;
-    border-radius: 50%; /* Hace los íconos circulares */
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para mejor visibilidad */
+    border-radius: 50%;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .social-icon img:hover {
-    transform: scale(1.1); /* Efecto de zoom al pasar el ratón */
-    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.15); /* Aumenta la sombra al hacer hover */
+    transform: scale(1.1);
+    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.15);
 }
+
 /* Secciones */
 section {
     padding: 30px 20px;
@@ -156,7 +159,7 @@ header {
 
 /* 🔹 Logo en el Header */
 .logo {
-    width: 200px; /* Tamaño base */
+    width: 200px;
     height: auto;
     transition: width 0.3s ease-in-out;
 }
@@ -199,22 +202,21 @@ header {
 /* 📌 🔹 Responsividad */
 @media (max-width: 1024px) {
     .logo {
-        width: 120px; /* Reducción en tablets */
+        width: 120px;
     }
 }
 
 @media (max-width: 768px) {
     .logo {
-        width: 100px; /* Reducción en celulares */
+        width: 100px;
     }
 
     /* Menú hamburguesa visible */
     .menu-toggle {
         display: flex;
-        
     }
 
-    /* Ocultar la lista de navegación por defecto */
+    /* Menú oculto por defecto */
     .nav-list {
         display: none;
         flex-direction: column;
@@ -225,6 +227,8 @@ header {
         width: 200px;
         box-shadow: 0 4px 8px rgba(0,0,0,0.1);
         border-radius: 5px;
+        padding: 10px 0;
+        z-index: 1000;
     }
 
     /* Mostrar menú cuando se activa */
@@ -237,7 +241,3 @@ header {
         text-align: center;
     }
 }
-
-
-
-
